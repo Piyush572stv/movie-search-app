@@ -1,0 +1,457 @@
+/* ==========================================
+        GOOGLE FONT
+========================================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+/* ==========================================
+                BODY
+========================================== */
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:30px;
+
+    background:
+    radial-gradient(circle at top left,#4f46e5 0%,transparent 28%),
+    radial-gradient(circle at bottom right,#0ea5e9 0%,transparent 32%),
+    radial-gradient(circle at center,#1e40af20 0%,transparent 45%),
+    linear-gradient(135deg,#020617,#0f172a,#1e293b,#111827);
+
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+/* ==========================================
+            MAIN CONTAINER
+========================================== */
+
+.outer{
+
+    width:500px;
+
+    padding:35px;
+
+    border-radius:26px;
+
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.14),
+        rgba(255,255,255,.05)
+    );
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.55),
+    0 0 30px rgba(59,130,246,.18),
+    inset 0 1px 0 rgba(255,255,255,.15);
+
+    transition:.4s ease;
+}
+
+.outer:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 35px 70px rgba(0,0,0,.6),
+    0 0 40px rgba(59,130,246,.25);
+}
+
+/* ==========================================
+                TITLE
+========================================== */
+
+h1{
+
+    text-align:center;
+
+    color:#ffffff;
+
+    font-size:35px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    margin-bottom:28px;
+
+    text-shadow:
+    0 0 15px rgba(255,255,255,.35);
+}
+
+/* ==========================================
+            SEARCH SECTION
+========================================== */
+
+.top{
+
+    display:flex;
+
+    gap:14px;
+
+    margin-bottom:30px;
+}
+
+.inputValue{
+
+    flex:1;
+
+    height:56px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:16px;
+
+    padding:0 20px;
+
+    font-size:17px;
+
+    font-weight:500;
+
+    background:#ffffff;
+
+    transition:.35s;
+}
+
+.inputValue::placeholder{
+
+    color:#64748b;
+}
+
+.inputValue:focus{
+
+    transform:scale(1.02);
+
+    box-shadow:
+    0 0 0 3px rgba(59,130,246,.25),
+    0 0 20px rgba(59,130,246,.35);
+}
+
+/* SEARCH BUTTON */
+
+.search{
+
+    width:62px;
+
+    border:none;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:linear-gradient(135deg,#f59e0b,#ea580c);
+
+    transition:.35s;
+
+    box-shadow:
+    0 10px 25px rgba(249,115,22,.4);
+}
+
+.search:hover{
+
+    transform:scale(1.08);
+
+    background:linear-gradient(135deg,#facc15,#ef4444);
+
+    box-shadow:
+    0 12px 28px rgba(249,115,22,.55);
+}
+
+.search::before{
+
+    content:"🔍";
+
+    font-size:24px;
+}
+
+/* ==========================================
+            MOVIE POSTER
+========================================== */
+
+.poster{
+
+    width:100%;
+
+    height:540px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+    background:#111827;
+
+    border:2px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.55);
+
+    transition:.4s;
+}
+
+.poster:hover{
+
+    transform:scale(1.015);
+}
+
+.poster img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.4s;
+}
+
+.poster img:hover{
+
+    transform:scale(1.04);
+}
+
+.poster:empty::before{
+
+    content:"🎬 Movie Poster";
+
+    color:#94a3b8;
+
+    font-size:24px;
+
+    font-weight:600;
+}
+
+/* ==========================================
+            DETAILS SECTION
+========================================== */
+
+.bottom{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+}
+
+/* EACH CARD */
+
+.bottom div{
+
+    min-height:68px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 20px;
+
+    border-radius:16px;
+
+    font-size:19px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    color:#ffffff;
+
+    background:linear-gradient(
+    135deg,
+    rgba(17,24,39,.85),
+    rgba(30,41,59,.92));
+
+    border-left:7px solid;
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,.35);
+
+    transition:.35s;
+}
+
+.bottom div:hover{
+
+    transform:translateX(8px);
+
+    background:linear-gradient(
+    135deg,
+    rgba(30,41,59,.98),
+    rgba(15,23,42,.95));
+
+    box-shadow:
+    0 15px 30px rgba(0,0,0,.45);
+}
+
+/* ==========================================
+        LABELS (TITLE / YEAR ETC)
+========================================== */
+
+/*
+HTML Example
+
+<div class="title">
+<strong>Title :</strong>
+&nbsp; Avengers
+</div>
+
+*/
+
+/* TITLE */
+
+.title{
+
+    border-left-color:#22c55e;
+
+    color:#f8fafc;
+}
+
+.title strong{
+
+    color:#4ade80;
+
+    font-weight:800;
+}
+
+/* YEAR */
+
+.year{
+
+    border-left-color:#f59e0b;
+
+    color:#f8fafc;
+}
+
+.year strong{
+
+    color:#fbbf24;
+
+    font-weight:800;
+}
+
+/* LANGUAGE */
+
+.language{
+
+    border-left-color:#38bdf8;
+
+    color:#f8fafc;
+}
+
+.language strong{
+
+    color:#38bdf8;
+
+    font-weight:800;
+}
+
+/* RATING */
+
+.rating{
+
+    border-left-color:#ef4444;
+
+    color:#f8fafc;
+}
+
+.rating strong{
+
+    color:#fb7185;
+
+    font-weight:800;
+}
+
+/* ==========================================
+        SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#475569;
+
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#64748b;
+}
+
+/* ==========================================
+            RESPONSIVE
+========================================== */
+
+@media(max-width:550px){
+
+body{
+
+padding:18px;
+
+}
+
+.outer{
+
+width:100%;
+
+padding:22px;
+
+}
+
+.poster{
+
+height:390px;
+
+}
+
+h1{
+
+font-size:28px;
+
+}
+
+.inputValue{
+
+font-size:15px;
+
+}
+
+.bottom div{
+
+font-size:16px;
+
+min-height:58px;
+
+padding:16px;
+
+}
+
+}
